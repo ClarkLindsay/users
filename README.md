@@ -133,9 +133,9 @@ Once completed, it will then use the callback mechanism to access the applicatio
 methods.
 
 ### Event `UPDATE_USER`
-To update a user, you will simply use the same builder concept as finding a user, but then use that id and use the 
-builder pattern to create a new user, but instead of building with the default `build()`, you will use the `build
-(int)` to pass it the id to use. Once built, you will then replace the collections value at the key with the new 
+To update a user, you will simply use the same builder concept as finding a user to get a user id. Once you have that
+ id, simply ask for name and email and then build. Once built, you will then replace the collections value at the key 
+ with the new 
 `User` object.
 
 Once completed, it will then use the callback mechanism to access the applications `setStateData` and `nextState` 
@@ -155,24 +155,25 @@ The `UserDAO` is by far the most involved. Plan on spending time with it. The gr
 is that for each event, you can and should, redo the builder, eg:
 
 ```java
+// example to remove a user
 User user = UserBuilder.newBuilder().getID().build();
 this.users.remove(user.getId());
 ```
 
 ```java
+// example to find a user
 User user = UserBuilder.newBuilder().getID().build();
-user = (User) this.users.get(user.getId());
+user = this.users.get(user.getId());
 ```
 
 ```java
+// example to create a user
 User user = UserBuidler.newBuilder().addName().addEmail().build();
-this.users.put(user.getId(), user);
 ```
 
 ```java
-UserBuilder builder = UserBuilder.newBuilder();
-User user = builder.getID().build();
-user = builder.addName().addEmail().build(user.getId())
+// example to update a user
+User user = UserBuilder.newBuilder().getID().addName().addEmail().build();
 ```
 
 ## Prompter 
@@ -206,7 +207,9 @@ Please select an action:
 7. Quit
 ```
 
-Upon selection, it will call upon the application to its next change state.
+Upon selection, it will call upon the application to change its next change state. This change is different than all 
+the others. Every other state change only has one option. This one has many. Being so, you must call `setNextState` 
+with the correct state requested by the application user. 
 
 #### Event `USER_CREATED`
 This event occurs after the `CREATE_USER` event and will take the passed data and print out a logical message with 
@@ -247,8 +250,15 @@ Hopefully you see a lot of reusable code here. Use that hint to your advantage.
 ## Logger
 <center><img src="http://i.imgur.com/zZr7Pac.jpg" height=400></center>
 
-The `Logger` is a memento pattern to record the events of the application user. Each state change should be logged. 
-This means it will act upon every single event that occurs. It should simply record the state change as a string. 
+The `Logger` is a memento pattern to record the events of the application user. Each state change of meaning should be logged. It should simply record the state change as a string. 
+
+The events of "meaning" are:
+* USER_CREATED
+* USER_FOUND
+* ALL_USERS_FOUND
+* USER_UPDATED
+* USER_DELETED
+
 This means if the event is `CREATE_USER`, the recorded event should be something like `At [time], request to create a
  user`.
  
