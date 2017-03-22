@@ -275,7 +275,7 @@ As will all take home labs, extra credit is awarded for writing unit tests. You 
 driving application, but should for each other instantiable class in the lab.
 
 ## Due Date
-This lab has a due date. It will be due the last *instructional* day of the course. Because of so, extra 
+This lab has no "run by" date. It will be due like the rest of the labs on the last *instructional* day of the course. Because of so, extra 
 credit will be awarded with working code on that day. Please note that since this is due the last day of class, you will not be able to turn it in any later after the last day of instruction. You will have to complete this lab either in 
 teams or on your own, and have it fully functioning by the end of the semester if you wish to have a shot at the 
 extra credit. 
