@@ -24,10 +24,10 @@ You are required to have 3 observers.
 
 
 Here are the interfaces required to complete this lab.
-<center><img src="http://i.imgur.com/aBXk8MB.jpg" height=400></center>
+<center><img src="http://i.imgur.com/7UdhoI1.jpg" height=400></center>
 
 ## Application Driver
-<center><img src="http://i.imgur.com/rw7079Y.jpg" height=400></center>
+<center><img src="http://i.imgur.com/NXCounx.jpg" height=400></center>
 
 Your application driver does two things, and two things only. First, it manages its state. Second, it notifies all observers a state changed. The following are the possible state paths.
 
@@ -105,7 +105,7 @@ Hopefully you see that our `Application` is simply providing a mechanism for our
 ## UserDAO
 The User Data Access Object (UserDAO) is part of the Observer Pattern and integrates the Builder Pattern. The following is the UML for this portion of the lab.
 
-<center><img src="http://i.imgur.com/m0BWhVD.jpg" height=400></center>
+<center><img src="http://i.imgur.com/YpCw3lI.jpg" height=400></center>
 
 Through the `Observable` interface, the `UserDAO` will listen for the following state changes:
 
@@ -176,7 +176,7 @@ user = builder.addName().addEmail().build(user.getId())
 ```
 
 ## Prompter 
-<center><img src="http://i.imgur.com/OhDbMal.jpg" height=400></center>
+<center><img src="http://i.imgur.com/cbR8zpe.jpg" height=400></center>
 
 The `Prompter` provides two main features, it acts as the tool that will manage event change notifications to the 
 user of your application, and it provides a `HumanInterface` mechanism. Realize `HumanInterface` is not an interface 
@@ -245,7 +245,7 @@ Hopefully you see a lot of reusable code here. Use that hint to your advantage.
 
 
 ## Logger
-<center><img src="http://i.imgur.com/HpMugh8.jpg" height=400></center>
+<center><img src="http://i.imgur.com/zZr7Pac.jpg" height=400></center>
 
 The `Logger` is a memento pattern to record the events of the application user. Each state change should be logged. 
 This means it will act upon every single event that occurs. It should simply record the state change as a string. 
