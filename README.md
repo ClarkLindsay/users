@@ -26,10 +26,4 @@ Your application driver does two things, and two things only. First, it manages 
 
 
 
-```{r, echo=FALSE}
-# Define variable containing url
-url <- "http://www.online-image-editor.com//styles/2014/images/example_image.png"
-```
-
-
-<center><img src="`r url`"></center>
+<center><img src="http://imgur.com/a/Cg3kJ"></center>
