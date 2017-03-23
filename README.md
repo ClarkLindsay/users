@@ -268,7 +268,9 @@ the state data and tells the application to make a state change.
 
 
 ## Grading
-Unlike other take home labs, this one will be optional. It will remain pass/fail, but upon passing, the 25 points earned will be applied to any **lost** extra credit from previous labs.
+Unlike other take home labs, this one will be optional. It will remain pass/fail, but upon passing, the 25 points earned will be applied to any **lost** extra credit from previous labs. This does not include any extra credit that was 
+spontaneously offered. It only applies to lab 1, 2, 3, and 4 extra credits. If you are not missing the full 25 points
+ of lab extra credits and complete this lab, you will not go past the 25 points available on previous labs.
 
 ## Extra credit
 Because this lab is for recovering any missing extra credit, it will not be afforded any extra credit.
