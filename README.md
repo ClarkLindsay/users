@@ -268,14 +268,11 @@ the state data and tells the application to make a state change.
 
 
 ## Grading
-As with all take home labs, this will be graded as pass/fail. It is worth 25 points.
+Unlike other take home labs, this one will be optional. It will remain pass/fail, but upon passing, the 25 points earned will be applied to any **lost** extra credit from previous labs.
 
 ## Extra credit
-As will all take home labs, extra credit is awarded for writing unit tests. You do not need to write tests for your 
-driving application, but should for each other instantiable class in the lab.
+Because this lab is for recovering any missing extra credit, it will not be afforded any extra credit.
 
 ## Due Date
-This lab has no "run by" date. It will be due like the rest of the labs on the last *instructional* day of the course. Because of so, extra 
-credit will be awarded with working code on that day. Please note that since this is due the last day of class, you will not be able to turn it in any later after the last day of instruction. You will have to complete this lab either in 
-teams or on your own, and have it fully functioning by the end of the semester if you wish to have a shot at the 
+This lab has no "run by" date. It will be due like the rest of the labs on the last *instructional* day of the course. Please note that since this is due the last day of class, you will not be able to turn it in any later after the last day of instruction. You will have to complete this lab either in teams or on your own, and have it fully functioning by the end of the semester if you wish to have a shot at the 
 extra credit. 
